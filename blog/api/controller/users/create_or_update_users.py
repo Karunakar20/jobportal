@@ -15,6 +15,7 @@ class CreateUsersController:
           self.username = self.data.get('username',None)
           self.password = self.data.get('password',None)
           self.display_name = self.data.get('display_name',None)
+          self.is_recruiter = bool(self.data.get('is_recruiter',False))
      
      def __getAll(self):
           if self.id:
@@ -38,6 +39,7 @@ class CreateUsersController:
                     users.username = self.username
                     users.password = self.password
                     users.display_name = self.display_name
+                    users.is_recruiter = self.is_recruiter
                     users.save()
                     
                     return PortalResponse(True, PortalResponseType.success,None,self.sucess)
