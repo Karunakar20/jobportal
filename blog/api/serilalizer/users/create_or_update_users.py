@@ -11,5 +11,6 @@ class SrUsers(serializers.ModelSerializer):
           ret['username'] = instance.username if instance.username else None
           ret['password'] = instance.password if instance.password else None
           ret['display_name'] = instance.display_name if instance.display_name else None
+          ret['is_recruiter'] = instance.is_recruiter if instance.is_recruiter else None
           
           return ret
