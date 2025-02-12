@@ -1,8 +1,8 @@
 from rest_framework.views import APIView, Response
-from api.controller.users.create_or_update_users import CreateUsersController
+from api.controller.users.register import Register
 
 
-class ApiCreateUsers(APIView):
+class ApiRegister(APIView):
      
      def post(self,request):
           
@@ -14,7 +14,7 @@ class ApiCreateUsers(APIView):
                "id":None
           }
           
-          ret = CreateUsersController(data).manage()
+          ret = Register(data).manage()
           return Response(ret.toJson())
      
      def get(self,request):
@@ -28,7 +28,7 @@ class ApiCreateUsers(APIView):
                "id":id
           }
           
-          ret = CreateUsersController(data).get()
+          ret = Register(data).get()
           return Response(ret.toJson())
           
           

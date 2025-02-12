@@ -1,9 +1,9 @@
 from django.db import DatabaseError, transaction
 from api.api_models.user import PortalUsers
 from api.common.meta import PortalResponse,PortalResponseType
-from api.serilalizer.users.create_or_update_users import SrUsers
+from api.serilalizer.users.register import SrUsers
 
-class CreateUsersController:
+class Register:
      
      def __init__(self,pData):
           self.data = pData['data']
