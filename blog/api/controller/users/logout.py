@@ -4,6 +4,7 @@ from api.api_models.authenticate import Authentcation
 from django.db import DatabaseError, transaction
 
 class LogoutController:
+     
      def __init__(self,pId):
           self.id = pId
      
